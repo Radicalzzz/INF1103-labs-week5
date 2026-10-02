@@ -1,23 +1,26 @@
-{
-    "inventory": 
-    [
-        {
-            "ID": "P001",
-            "Name": "Laptop",
-            "Price": 1200.00,
-            "Stock": 15
-        },
-        {
-            "ID": "P002",
-            "Name": "Mouse",
-            "Price": 25.50,
-            "Stock": 40
-        },
-        {
-            "ID": "P003",
-            "Name": "Keyboard",
-            "Price": 45.00,
-            "Stock": 25
-        }
-    ]
-}
+[
+    {
+        "id": "P001",
+        "name": "Laptop",
+        "price": 1200.0,
+        "stock": 15
+    },
+    {
+        "id": "P002",
+        "name": "Mouse",
+        "price": 25.5,
+        "stock": 40
+    },
+    {
+        "id": "P003",
+        "name": "Keyboard",
+        "price": 45.0,
+        "stock": 25
+    },
+    {
+        "id": "P004",
+        "name": "p",
+        "price": 1.0,
+        "stock": 1
+    }
+]
