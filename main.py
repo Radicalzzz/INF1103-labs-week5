@@ -14,7 +14,6 @@ def save_inventory(data):
 
 def add_product():
     data = load_inventory()
-
     product_name = input("Enter the product name: ").capitalize()
     price = float(input("Enter the price: "))
     quantity = int(input("Enter the quantity: "))
@@ -33,7 +32,7 @@ def add_product():
 def display_all():
     data = load_inventory()
     print("\nCurrent Inventory:")
-    print("-----------------------------------------------------------------")
+    print("-------------------------------------------------------")
 
     for product in data:
        print(
@@ -42,7 +41,7 @@ def display_all():
             f"Price: ${product['price']:.2f} |", # .2f = 2 decimal places | floating point value
             f"Stock: {product['stock']}"
         )
-    print("-----------------------------------------------------------------")
+    print("-------------------------------------------------------")
 
 def search_product():
     data = load_inventory()
@@ -52,7 +51,7 @@ def search_product():
 
     if found_products:
         print("\nSearch Results:")
-        print("-----------------------------------------------------------------")
+        print("-------------------------------------------------------")
         for product in found_products:
             print(
                 f"ID: {product['id']} |",
@@ -60,7 +59,7 @@ def search_product():
                 f"Price: ${product['price']:.2f} |",
                 f"Stock: {product['stock']}"
             )
-        print("-----------------------------------------------------------------")
+        print("-------------------------------------------------------")
     else:
         print("Product not found.")
 
@@ -75,7 +74,39 @@ def update_stock():
             save_inventory(data)
             print("Stock updated successfully!")
             return
-
     print("Product not found.")
 
-update_stock()
+while True:
+    print("\n==================================")
+    print("INVENTORY MANAGEMENT SYSTEM")
+    print("==================================")
+
+    print("\n----------MENU----------")
+    print("1. Display All Products")
+    print("2. Add Product")
+    print("3. Update Product")
+    print("4. Search Product")
+    print("5. Save Inventory")
+    print("6. Exit")
+
+    choice = input("\nEnter option: ")
+    if choice == "1":
+        display_all()
+    elif choice == "2":
+        add_product()
+    elif choice == "3":
+        update_stock()
+    elif choice == "4":
+        search_product()
+    elif choice == "5":
+        data = load_inventory()
+        save_inventory(data)
+        print("\nInventory saved successfully!")
+    elif choice == "6":
+        data = load_inventory()
+        save_inventory(data)
+        print("\nSaving Inventory before exiting...", "\nInventory saved successfully.")
+        print("\nThank you for using Inventory Management System", "\nProgram terminated.")
+        break
+    else:
+        print("Invalid choice. Please enter a valid option from 1 to 6.")
