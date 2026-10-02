@@ -32,7 +32,6 @@ def add_product():
     
 def display_all():
     data = load_inventory()
-    print(data)
     print("\nCurrent Inventory:")
     print("-----------------------------------------------------------------")
 
@@ -40,9 +39,29 @@ def display_all():
        print(
             f"ID: {product['id']} |",
             f"Name: {product['name']} |",
-            f"Price: ${product['price']:.02f} |",
+            f"Price: ${product['price']:.2f} |", # .2f = 2 decimal places | floating point value
             f"Stock: {product['stock']}"
         )
     print("-----------------------------------------------------------------")
 
-display_all()
+def search_product():
+    data = load_inventory()
+    search_name = input("Enter the product ID to search: ").capitalize()
+
+    found_products = [product for product in data if product['id'] == search_name]
+
+    if found_products:
+        print("\nSearch Results:")
+        print("-----------------------------------------------------------------")
+        for product in found_products:
+            print(
+                f"ID: {product['id']} |",
+                f"Name: {product['name']} |",
+                f"Price: ${product['price']:.2f} |",
+                f"Stock: {product['stock']}"
+            )
+        print("-----------------------------------------------------------------")
+    else:
+        print("Product not found.")
+
+search_product()
