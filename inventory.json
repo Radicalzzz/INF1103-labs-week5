@@ -1,44 +1,8 @@
 [
     {
         "id": "P001",
-        "name": "Laptop",
-        "price": 1200.0,
-        "stock": 15
-    },
-    {
-        "id": "P002",
-        "name": "Mouse",
-        "price": 25.5,
-        "stock": 40
-    },
-    {
-        "id": "P003",
-        "name": "Keyboard",
-        "price": 45.0,
-        "stock": 25
-    },
-    {
-        "id": "P004",
-        "name": "p",
-        "price": 1.0,
-        "stock": 1
-    },
-    {
-        "id": "P005",
-        "name": "computer",
-        "price": 100.0,
-        "stock": 100
-    },
-    {
-        "id": "P006",
         "name": "Computer",
         "price": 1000.0,
-        "stock": 100
-    },
-    {
-        "id": "P007",
-        "name": "Pppp",
-        "price": 100.0,
-        "stock": 100
+        "stock": 10
     }
 ]

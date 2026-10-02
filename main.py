@@ -1,9 +1,12 @@
 import json
 
 def load_inventory():
-    with open('inventory.json', 'r') as file:
-        data = json.load(file)
-        print(data)
+    try:
+        with open('inventory.json', 'r') as file:
+            data = json.load(file)
+            return data
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
 
 def add_product():
     with open('inventory.json', 'r') as file:
