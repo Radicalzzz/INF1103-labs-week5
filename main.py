@@ -1,7 +1,6 @@
 import json
 
 def load_inventory():
-    global data
     with open('inventory.json', 'r') as file:
         data = json.load(file)
         print(data)
@@ -10,11 +9,12 @@ def add_product():
     with open('inventory.json', 'r') as file:
         data = json.load(file)
 
-    product_name = input("Enter the product name: ")
+    product_name = input("Enter the product name: ").capitalize()
     price = float(input("Enter the price: "))
     quantity = int(input("Enter the quantity: "))
 
     product = {
+        #:03d, 0 = fill empty spaces with zeros, 3 = use 3 digits, d = integer, 
         'id': f'P{len(data) + 1:03d}',
         'name': product_name,
         'price': price,

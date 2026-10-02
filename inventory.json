@@ -22,5 +22,23 @@
         "name": "p",
         "price": 1.0,
         "stock": 1
+    },
+    {
+        "id": "P005",
+        "name": "computer",
+        "price": 100.0,
+        "stock": 100
+    },
+    {
+        "id": "P006",
+        "name": "Computer",
+        "price": 1000.0,
+        "stock": 100
+    },
+    {
+        "id": "P007",
+        "name": "Pppp",
+        "price": 100.0,
+        "stock": 100
     }
 ]
