@@ -64,4 +64,18 @@ def search_product():
     else:
         print("Product not found.")
 
-search_product()
+def update_stock():
+    data = load_inventory()
+    product_id = input("Enter the product ID to update stock: ").capitalize()
+
+    for product in data:
+        if product['id'] == product_id:
+            new_stock = int(input(f"Enter the new stock quantity for {product['name']}: "))
+            product['stock'] = new_stock
+            save_inventory(data)
+            print("Stock updated successfully!")
+            return
+
+    print("Product not found.")
+
+update_stock()

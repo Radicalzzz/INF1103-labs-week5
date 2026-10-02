@@ -3,12 +3,12 @@
         "id": "P001",
         "name": "Computer",
         "price": 1000.0,
-        "stock": 10
+        "stock": 500
     },
     {
         "id": "P002",
         "name": "Computer",
         "price": 10.0,
-        "stock": 10
+        "stock": 100000
     }
 ]
