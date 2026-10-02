@@ -30,4 +30,19 @@ def add_product():
     save_inventory(data)
     print("Product added successfully!")
     
-add_product()
+def display_all():
+    data = load_inventory()
+    print(data)
+    print("\nCurrent Inventory:")
+    print("-----------------------------------------------------------------")
+
+    for product in data:
+       print(
+            f"ID: {product['id']} |",
+            f"Name: {product['name']} |",
+            f"Price: ${product['price']:.02f} |",
+            f"Stock: {product['stock']}"
+        )
+    print("-----------------------------------------------------------------")
+
+display_all()
