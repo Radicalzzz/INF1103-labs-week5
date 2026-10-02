@@ -8,9 +8,12 @@ def load_inventory():
     except (FileNotFoundError, json.JSONDecodeError):
         return []
 
+def save_inventory(data):
+    with open('inventory.json', 'w') as file:
+        json.dump(data, file, indent=4)
+
 def add_product():
-    with open('inventory.json', 'r') as file:
-        data = json.load(file)
+    data = load_inventory()
 
     product_name = input("Enter the product name: ").capitalize()
     price = float(input("Enter the price: "))
@@ -24,11 +27,7 @@ def add_product():
         'stock': quantity
     }
     data.append(product)
-
-    with open('inventory.json', 'w') as file:
-        json.dump(data, file, indent=4)
-
-    print(f"Product '{product_name}' added to inventory.")
-    print(data)
+    save_inventory(data)
+    print("Product added successfully!")
     
 add_product()

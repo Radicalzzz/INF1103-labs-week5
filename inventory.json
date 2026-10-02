@@ -4,5 +4,11 @@
         "name": "Computer",
         "price": 1000.0,
         "stock": 10
+    },
+    {
+        "id": "P002",
+        "name": "Computer",
+        "price": 10.0,
+        "stock": 10
     }
 ]
